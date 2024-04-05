@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* font-family: "Josefin Sans", sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(26, 25, 25);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+nav {
+  padding: 3rem 9rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+}
+
+.hamburger,
+.iconClose {
+  display: none;
+  cursor: pointer;
+}
+
+.logo2 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+  display: none;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.nav-list li:hover,
+.socials p:hover {
+  border-bottom: 1px solid white;
+}
+
+.container {
+  padding: 4rem 9rem;
+}
+
+.myInfo {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@keyframes myInfo-load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#myInfo-left {
+  width: 50%;
+  animation: myInfo-load 1s ease-in;
+}
+
+.aboutHeader,
+.projectsHeader,
+.contactHeader {
+  font-size: 100px;
+  filter: brightness(25%);
+  color: rgb(167, 161, 161);
+  font-family: "League Spartan", sans-serif;
+}
+
+.aboutText,
+.projectsText,
+.contactBody {
+  font-size: 25px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding-bottom: 1.5rem;
+}
+
+.projectsText,
+.contactBody {
+  text-align: center;
+}
+
+.myInfo-text {
+  display: flex;
+  padding: 3rem 0 4rem 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.myInfo-text-p1 {
+  writing-mode: vertical-rl;
+  position: relative;
+  letter-spacing: 4px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.myInfo-text-p1::after {
+  content: "";
+  background: white;
+  height: 1px;
+  width: 50px;
+  position: absolute;
+  left: -15px;
+  rotate: 90deg;
+  transform: translateX(40px);
+}
+
+.myInfo-text-p2 {
+  line-height: 25px;
+  font-weight: 300;
+  padding-left: 3rem;
+}
+
+.computerImg {
+  background: url(images/computer.png) no-repeat center center/cover;
+  height: 300px;
+  width: 300px;
+  animation: myInfo-load 2s ease-in;
+}
+
+.findMe {
+  font-family: "Josefin Sans", sans-serif;
+  padding-bottom: 3rem;
+}
+
+.socials {
+  display: flex;
+  padding-top: 1rem;
+  gap: 20px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  font-weight: 300;
+}
+
+.twitter,
+.github {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.getStarted {
+  padding: 1rem 2rem;
+  font-size: 13px;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.getStarted:hover {
+  background: white;
+  color: black;
+  font-weight: 500;
+  transition: 0.5s linear;
+  cursor: pointer;
+}
+
+.projectSlideUp {
+  opacity: 0;
+}
+
+@keyframes projectAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideUp {
+  animation-name: projectAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+#projects,
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7rem;
+}
+
+.checkoutText {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.myWorks {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 42%);
+  justify-content: space-between;
+}
+
+.ProjectsDesign {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.projectsImg {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.ProjectsName {
+  padding: 2rem 0 1rem 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.codesUsed {
+  margin: 1rem 0 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  width: 52%;
+}
+
+.codesUsed button {
+  background: rgb(107, 107, 132);
+  color: white;
+  padding: 0.5rem;
+  font-size: 13px;
+  border: 0;
+  border-radius: 5px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.ProjectsCodeDemo {
+  display: flex;
+  gap: 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.ProjectsCode,
+.ProjectsDemo {
+  display: flex;
+  gap: 10px;
+}
+
+.ProjectsCode a,
+.ProjectsDemo a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.ProjectsCodeDemo a:hover {
+  text-decoration: underline;
+}
+
+.contactSection {
+  opacity: 0;
+}
+
+@keyframes contactAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.contactSlideUp {
+  animation-name: contactAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.contactText {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  width: 40%;
+  text-align: center;
+}
+
+#contactInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.contactForm {
+  width: 50%;
+}
+
+.formText {
+  width: 100%;
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.contactForm textarea {
+  padding-bottom: 4rem;
+}
+
+.nameError,
+.emailError,
+.messageError {
+  transform: translateY(-20px);
+  font-size: 13px;
+  font-style: italic;
+  color: red;
+}
+
+.submitBtn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.submit {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 1rem 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  width: 50%;
+}
+
+.submit:hover {
+  background: white;
+  color: black;
+  transition: 0.5s linear;
+  cursor: pointer;
+}
+
+.phoneEmail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactEmail,
+.contactPhone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.contactEmail-header,
+.contactPhone-header {
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  color: rgb(167, 161, 161);
+}
+
+.contactEmail-text,
+.contactPhone-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+/* RESPONSIVE CSS */
+@media (max-width: 767px) {
+  .nav-logo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+
+  .logo2 {
+    display: block;
+    padding-bottom: 3rem;
+  }
+
+  nav {
+    padding: 3rem 2rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .iconClose {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .nav-list li {
+    font-size: 18px;
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .myInfo {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #myInfo-left {
+    width: 100%;
+  }
+
+  .aboutHeader,
+  .projectsHeader,
+  .contactHeader {
+    font-size: 80px;
+  }
+
+  .aboutText,
+  .projectsText,
+  .contactBody {
+    font-size: 20px;
+  }
+
+  .myInfo-text-p2 {
+    line-height: 25px;
+    font-weight: 300;
+  }
+
+  .computerImg-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .computerImg {
+    background: url(images/computer.png) no-repeat center center/cover;
+    height: 300px;
+    width: 80%;
+    margin-bottom: 4rem;
+  }
+
+  .myWorks {
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .ProjectsName {
+    padding: 2rem 0 1rem 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+  }
+
+  .projectsImg {
+    height: 220px;
+  }
+  .codesUsed {
+    margin: 1rem 0 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+  }
+
+  #contactInfo {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .contactText {
+    width: 100%;
+  }
+
+  .contactForm {
+    width: 100%;
+  }
+
+  .submit {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  nav {
+    padding: 3rem;
+  }
+
+  .container {
+    padding: 3rem;
+  }
+
+  .myInfo {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #myInfo-left {
+    width: 100%;
+    padding-top: 3rem;
+  }
+
+  .myWorks {
+    grid-template-columns: repeat(2, 47%);
+  }
+
+  .codesUsed {
+    width: 65%;
+  }
+}
