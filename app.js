@@ -68,7 +68,7 @@ window.addEventListener("scroll", () => {
       contactAnimation.style.opacity = 1;
     }
   } else if (window.innerWidth <= 767) {
-    if (document.documentElement.scrollTop > 2250) {
+    if (document.documentElement.scrollTop > 2150) {
       document.querySelector(".contactSection").classList.add("contactSlideUp");
       contactAnimation.style.opacity = 1;
     }
